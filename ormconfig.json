@@ -1,6 +1,6 @@
 {
   "type": "postgres",
-  "url": "${DATABASE_URL}",
+  "url": "$DATABASE_URL",
   "synchronize": false,
   "logging": false,
   "ssl": true,
