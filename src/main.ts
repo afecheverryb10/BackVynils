@@ -8,3 +8,4 @@ async function bootstrap() {
   await app.listen(port);
 }
 bootstrap();
+console.log('DATABASE_URL:', process.env.DATABASE_URL);
