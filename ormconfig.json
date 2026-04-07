@@ -1,12 +1,18 @@
 {
     "type": "postgres",
-    "host": "localhost",
-    "port": 5432,
-    "username": "postgres",
-    "password": "postgres",
-    "database": "vinyls",
+    "url": "${DATABASE_URL}",
+    "port": "${DB_PORT:5432}",
+    "username": "${DB_USERNAME:postgres}",
+    "password": "${DB_PASSWORD:postgres}",
+    "database": "${DB_NAME:vinyls}",
     "synchronize": false,
     "logging": false,
+    "ssl": "${DB_SSL:true}",
+    "extra": {
+        "ssl": {
+            "rejectUnauthorized": false
+        }
+    },
     "entities": [
         "src/**/*entity.ts"
     ],
